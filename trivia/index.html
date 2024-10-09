@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            // Wait for DOM content to load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Function to handle feedback for both correct and incorrect buttons
+                function setFeedback(button, color, message) {
+                    // Set background color of the button
+                    button.style.backgroundColor = color;
+                    // Go to the parent element and update the feedback message
+                    button.parentElement.querySelector('.feedback').innerHTML = message;
+                }
+
+                // Get all elements with class "correct"
+                let corrects = document.querySelectorAll('.correct');
+                // Get all elements with class "incorrect"
+                let incorrects = document.querySelectorAll('.incorrect');
+
+                // Add event listeners to each correct button
+                corrects.forEach(correct => {
+                    correct.addEventListener('click', function() {
+                        setFeedback(correct, 'green', 'Correct');
+                    });
+                });
+
+                incorrects.forEach(incorrect => {
+                    incorrect.addEventListener('click', function() {
+                        setFeedback(incorrect, 'red', 'Incorrect');
+                    });
+                });
+
+
+            document.querySelector('#check').addEventListener('click',function(){
+                let input = document.querySelector('input');
+                let answer = input.value;
+                if (answer == 12){
+                    input.style.backgroundColor = 'green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    input.style.backgroundColor = 'red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                }
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> How many people in the world uses internet? </h3>
+                <button class="incorrect">Less than a billion</button>
+                <button class="incorrect">Between 1 and 3 billions</button>
+                <button class="incorrect">Between 3 and 5 billions</button>
+                <button class="correct">More than 5 billions</button>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is Carbon atomic number?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>

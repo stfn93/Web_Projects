@@ -1,0 +1,69 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header styling */
+#header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Custom button */
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Custom styles for the main heading */
+h1.text-center {
+    font-size: 5rem; /* Adjust the size as desired */
+    font-weight: bold; /* Makes the text bold */
+    color: #333; /* Set the text color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+
+.text-center {
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.text-content {
+    text-align: justify; /* Justify the text within the block */
+}
+p {
+    margin-bottom: 15px; /* Space below each paragraph */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+h1 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+.container {
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    font-family: Arial, sans-serif; /* Set the font */
+    line-height: 1.6; /* Increase line height for readability */
+    font-size: 1.2em; /* Set a larger base font size for the container */
+}
